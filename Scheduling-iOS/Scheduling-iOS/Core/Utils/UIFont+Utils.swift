@@ -22,5 +22,8 @@ extension UIFont {
     
     /// Sub label
     public static var subText: UIFont = UIFont.systemFont(ofSize: 12)
+    
+    /// bold Sub label
+    public static var boldSubText: UIFont = UIFont.boldSystemFont(ofSize: 12)
 
 }

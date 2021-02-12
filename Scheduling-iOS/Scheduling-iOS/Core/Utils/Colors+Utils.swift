@@ -23,6 +23,10 @@ extension UIColor {
     public static var buttonTitle: UIColor = .white
     /// button background color
     public static var buttonBackground: UIColor = .brandRed
+    /// even cell background color
+    public static var evenCellBackground: UIColor = .init(hex: "#7ED321", alpha: 0.2)
+    /// odd cell background color
+    public static var oddCellBackground: UIColor = .init(hex: "#F5A623", alpha: 0.2)
     /// Primary background color (package view)
     public static var primaryBackground: UIColor = .dynamicColor(
         light: .white,

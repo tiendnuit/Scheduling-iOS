@@ -9,12 +9,16 @@ import Foundation
 import UIKit
 
 protocol MatchViewPresenter {
-    var nameLabel: UILabel! {set get}
+    var dayLabel: UILabel! {set get}
+    var leftNameLabel: UILabel! {set get}
+    var vsImageView: UIImageView! {set get}
+    var rightNameLabel: UILabel! {set get}
 }
 
 extension MatchViewPresenter {
     func map(item: MatchPresenter?) {
         guard let match = item else { return }
-        nameLabel?.text = match.leftTeamNameText + " vs " + match.rightTeamNameText
+        leftNameLabel.text = match.leftTeamNameText
+        rightNameLabel.text = match.rightTeamNameText
     }
 }

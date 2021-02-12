@@ -35,8 +35,8 @@ extension MatchDataSource: UITableViewDataSource, UITableViewDelegate {
     }
     
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat.defaultCellHeight
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return CGFloat.defaultCellHeight
+//    }
     
 }

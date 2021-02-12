@@ -26,17 +26,30 @@ class MatchCellViewModelTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_calculate_schedule_poolSize_4_teamSize_8() {
+    func test_match_dayString() {
 
         //Given
         let randomMatch = viewModel.items.randomElement()!
-        let matchString = "Day \(randomMatch.day!) Game \(randomMatch.game!): \(randomMatch.match.leftTeamNameText) vs \(randomMatch.match.rightTeamNameText)"
+        let dayString = "Day \(randomMatch.day!) Game \(randomMatch.game!):"
         
         //When
         
 
         //Then
-        XCTAssert(randomMatch.matchString == matchString)
+        XCTAssert(randomMatch.dayString == dayString)
+    }
+    
+    func test_matchCell_isEven() {
+
+        //Given
+        let firstMatch = viewModel.items.first
+        let isEvenIndex = false
+        
+        //When
+        
+
+        //Then
+        XCTAssert(firstMatch?.isEvenIndex == isEvenIndex)
     }
     
     func testPerformanceExample() throws {

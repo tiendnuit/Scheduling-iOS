@@ -15,6 +15,7 @@ class ScheduleDetailViewController: UIViewController, UIViewControllerConfigurab
         let tableview = UITableView()
         tableview.translatesAutoresizingMaskIntoConstraints = false
         tableview.backgroundColor = .clear
+        tableview.separatorStyle = .none
         return tableview
     }()
     

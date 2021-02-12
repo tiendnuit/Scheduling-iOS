@@ -18,7 +18,12 @@ class MatchCellViewModel {
         self.game = game
     }
     
-    var matchString: String {
-        return "Day \(day!) Game \(game!): \(match.leftTeamNameText) vs \(match.rightTeamNameText)"
+    var dayString: String {
+        //return "Day \(day!) Game \(game!): \(match.leftTeamNameText) vs \(match.rightTeamNameText)"
+        return "Day \(day!) Game \(game!):"
+    }
+    
+    var isEvenIndex: Bool {
+        return game%2 == 0
     }
 }
