@@ -24,8 +24,8 @@ final class PoolSectionView: UITableViewHeaderFooterView {
         button.layer.cornerRadius = CGFloat.defaultRadius
         button.setTitleColor(UIColor.buttonTitle, for: .normal)
         button.titleLabel?.font = UIFont.boldBody
-        button.setTitle("Edit", for: .normal)
-        button.backgroundColor = UIColor.buttonBackground
+        button.setImage(#imageLiteral(resourceName: "icon-edit"), for: .normal)
+        button.backgroundColor = UIColor.clear
         button.addTarget(self, action: #selector(editButtonClicked), for: .touchUpInside)
         return button
     }()

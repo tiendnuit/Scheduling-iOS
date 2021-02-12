@@ -59,7 +59,7 @@ class HomeViewController: UIViewController, UIViewControllerConfigurable {
         dataSource = HomeDataSource(delegate: viewModel)
         tableview.dataSource = dataSource
         tableview.delegate = dataSource
-        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "TeamCell")
+        tableview.register(TeamViewCell.self, forCellReuseIdentifier: TeamViewCell.typeName)
         tableview.register(PoolSectionView.self, forHeaderFooterViewReuseIdentifier: PoolSectionView.typeName)
     }
     

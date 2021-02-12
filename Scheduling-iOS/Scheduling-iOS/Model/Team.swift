@@ -14,3 +14,9 @@ struct Team {
         return Team(name: name)
     }
 }
+
+extension Team: TeamPresenter {
+    var nameText: String {
+        return name
+    }
+}

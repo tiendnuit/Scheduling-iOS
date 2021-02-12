@@ -44,7 +44,6 @@ extension ListPoolProtocol {
     }
     
     func itemSelected(at: IndexPath) {
-        guard let item = item(at: at) else { return }
     }
     
     func titleForHeader(_ at: Int) -> String {

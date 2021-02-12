@@ -34,6 +34,10 @@
 		A69B9C3725D6199C00303AE0 /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C3625D6199C00303AE0 /* NameDescribable.swift */; };
 		A69B9C3C25D6288900303AE0 /* UIAlertController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C3B25D6288900303AE0 /* UIAlertController+Utils.swift */; };
 		A69B9C4125D628BD00303AE0 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C4025D628BD00303AE0 /* UIViewController+Utils.swift */; };
+		A69B9C5625D6364D00303AE0 /* TeamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C5525D6364D00303AE0 /* TeamPresenter.swift */; };
+		A69B9C5E25D6369F00303AE0 /* TeamViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C5D25D6369F00303AE0 /* TeamViewPresenter.swift */; };
+		A69B9C6325D6374D00303AE0 /* TeamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C6225D6374D00303AE0 /* TeamViewCell.swift */; };
+		A69B9C6D25D63E3500303AE0 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C6C25D63E3500303AE0 /* HomeViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		A69B9C3625D6199C00303AE0 /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
 		A69B9C3B25D6288900303AE0 /* UIAlertController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Utils.swift"; sourceTree = "<group>"; };
 		A69B9C4025D628BD00303AE0 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		A69B9C5525D6364D00303AE0 /* TeamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPresenter.swift; sourceTree = "<group>"; };
+		A69B9C5D25D6369F00303AE0 /* TeamViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewPresenter.swift; sourceTree = "<group>"; };
+		A69B9C6225D6374D00303AE0 /* TeamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewCell.swift; sourceTree = "<group>"; };
+		A69B9C6C25D63E3500303AE0 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +157,6 @@
 				A69B9B9B25D5F51500303AE0 /* SceneDelegate.swift */,
 				A69B9B9D25D5F51500303AE0 /* ViewController.swift */,
 				A69B9B9F25D5F51500303AE0 /* Main.storyboard */,
-				A69B9BA525D5F51800303AE0 /* Assets.xcassets */,
 				A69B9BA725D5F51800303AE0 /* LaunchScreen.storyboard */,
 				A69B9BAA25D5F51800303AE0 /* Info.plist */,
 				A69B9BA225D5F51500303AE0 /* Scheduling_iOS.xcdatamodeld */,
@@ -160,6 +167,7 @@
 		A69B9BB225D5F51800303AE0 /* Scheduling-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9C6A25D63E1400303AE0 /* Home */,
 				A69B9BB325D5F51800303AE0 /* Scheduling_iOSTests.swift */,
 				A69B9BB525D5F51800303AE0 /* Info.plist */,
 			);
@@ -178,6 +186,7 @@
 		A69B9BCF25D5F54A00303AE0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9BA525D5F51800303AE0 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -252,6 +261,10 @@
 		A69B9BD825D5F5B100303AE0 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9C5025D634F600303AE0 /* Coordinator */,
+				A69B9C4F25D634DB00303AE0 /* DataSource */,
+				A69B9C4E25D6348C00303AE0 /* ViewModel */,
+				A69B9C4D25D6348500303AE0 /* View */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -284,6 +297,7 @@
 		A69B9BEE25D5F93D00303AE0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9C5425D6363C00303AE0 /* Presenter */,
 				A69B9BF025D5F97600303AE0 /* ListPoolProtocol.swift */,
 				A69B9BFD25D5FA4800303AE0 /* SectionModelType.swift */,
 				A69B9C0A25D5FC3C00303AE0 /* Configurable.swift */,
@@ -309,8 +323,62 @@
 			isa = PBXGroup;
 			children = (
 				A69B9C2E25D6164800303AE0 /* PoolSectionView.swift */,
+				A69B9C6225D6374D00303AE0 /* TeamViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A69B9C4D25D6348500303AE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A69B9C4E25D6348C00303AE0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A69B9C4F25D634DB00303AE0 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		A69B9C5025D634F600303AE0 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A69B9C5425D6363C00303AE0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A69B9C5525D6364D00303AE0 /* TeamPresenter.swift */,
+				A69B9C5D25D6369F00303AE0 /* TeamViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A69B9C6A25D63E1400303AE0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A69B9C6B25D63E1C00303AE0 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A69B9C6B25D63E1C00303AE0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A69B9C6C25D63E3500303AE0 /* HomeViewModelTest.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +522,7 @@
 				A69B9BEA25D5F91C00303AE0 /* HomeDataSource.swift in Sources */,
 				A69B9B9A25D5F51500303AE0 /* AppDelegate.swift in Sources */,
 				A69B9C2925D6038800303AE0 /* Coordinator.swift in Sources */,
+				A69B9C5625D6364D00303AE0 /* TeamPresenter.swift in Sources */,
 				A69B9BF925D5FA1F00303AE0 /* PoolSection.swift in Sources */,
 				A69B9C0B25D5FC3C00303AE0 /* Configurable.swift in Sources */,
 				A69B9B9C25D5F51500303AE0 /* SceneDelegate.swift in Sources */,
@@ -462,7 +531,9 @@
 				A69B9C0625D5FBE000303AE0 /* HomeViewController.swift in Sources */,
 				A69B9BA425D5F51500303AE0 /* Scheduling_iOS.xcdatamodeld in Sources */,
 				A69B9BDD25D5F61500303AE0 /* Pool.swift in Sources */,
+				A69B9C5E25D6369F00303AE0 /* TeamViewPresenter.swift in Sources */,
 				A69B9C3725D6199C00303AE0 /* NameDescribable.swift in Sources */,
+				A69B9C6325D6374D00303AE0 /* TeamViewCell.swift in Sources */,
 				A69B9C1F25D5FDDD00303AE0 /* UIFont+Utils.swift in Sources */,
 				A69B9BFE25D5FA4800303AE0 /* SectionModelType.swift in Sources */,
 			);
@@ -473,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69B9BB425D5F51800303AE0 /* Scheduling_iOSTests.swift in Sources */,
+				A69B9C6D25D63E3500303AE0 /* HomeViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

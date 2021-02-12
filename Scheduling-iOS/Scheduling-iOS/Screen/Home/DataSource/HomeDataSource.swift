@@ -28,15 +28,12 @@ extension HomeDataSource: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = "TeamCell"
         guard let item = delegate?.item(at: indexPath) else {
             fatalError("Item not exists")
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        cell.textLabel?.text = item.name
-        cell.backgroundColor = .clear
-        cell.textLabel?.textColor = UIColor.label
+        let cell = tableView.dequeueReusableCell(withIdentifier: TeamViewCell.typeName, for: indexPath) as! TeamViewCell
+        cell.configure(item)
         return cell
     }
     
@@ -52,12 +49,16 @@ extension HomeDataSource: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat.defaultCellHeight
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat.headerSectionHeight
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

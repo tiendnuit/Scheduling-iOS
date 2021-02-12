@@ -15,7 +15,7 @@ extension CGFloat {
     /// Default spacing in the app
     public static var defaultSpacing: CGFloat { 16 }
     /// Default cell height
-    public static var defaultCellHeight: CGFloat { 270 }
+    public static var defaultCellHeight: CGFloat { 40 }
     /// Default number of items per row
     public static var defaultItemsPerRow: CGFloat { 2 }
     /// Separated line height
