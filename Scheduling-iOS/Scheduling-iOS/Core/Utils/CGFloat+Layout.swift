@@ -36,5 +36,9 @@ extension CGFloat {
     public static var smallButtonHeight: CGFloat { 30 }
     /// Height of the header section
     public static var headerSectionHeight: CGFloat { 50 }
+    /// Top Schedule detail height
+    public static var topScheduleBarHeight: CGFloat { 40 }
+    /// Default width of the button
+    public static var defaultButtonWidth: CGFloat { 40 }
 }
 

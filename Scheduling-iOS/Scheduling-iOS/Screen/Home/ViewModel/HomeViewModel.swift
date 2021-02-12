@@ -12,6 +12,7 @@ class HomeViewModel {
     @Published private(set) var pools: [Pool] = []
     @Published private(set) var reload = false
     @Published private(set) var alertMessage = ""
+    @Published private(set) var showScheduleDetail = false
     
     internal var bindings = Set<AnyCancellable>()
     fileprivate var expanded: [Bool] = []
@@ -45,6 +46,10 @@ class HomeViewModel {
         }
         pool.updateTeamName(name, at: indexPath.row)
         reload = true
+    }
+    
+    func goToScheduleDetail() {
+        showScheduleDetail = true
     }
 }
 

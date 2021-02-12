@@ -32,8 +32,34 @@ class AppCoordinator: Coordinator {
         let viewModel = HomeViewModel()
         let homePage = HomeViewController(viewModel: viewModel)
         homeViewModel = viewModel
+        homeViewModel?.$showScheduleDetail
+                .receive(on: RunLoop.main)
+                .sink { [weak self] show in
+                    guard show else { return }
+                self?.showScheduleDetail()
+            }.store(in: &bindings)
         navigationController.viewControllers = [homePage]
     }
     
+    func showScheduleDetail() {
+        guard let pools = homeViewModel?.pools else {
+            return
+        }
+        let detailCoordinator = ScheduleCoordinator(navigationController: navigationController,
+                                                    pools: pools)
+        detailCoordinator.coordinatorDelegate = self
+        childCoordinator = detailCoordinator
+        detailCoordinator.start()
+    }
     
+}
+
+//MARK: - ScheduleCoordinatorDelegate
+extension AppCoordinator: ScheduleCoordinatorDelegate {
+    func requestDismissal() {
+        navigationController.popViewController(animated: true)
+        childCoordinator = nil
+    }
+
+
 }

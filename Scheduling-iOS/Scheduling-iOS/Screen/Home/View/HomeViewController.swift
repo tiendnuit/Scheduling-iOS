@@ -11,6 +11,7 @@ import Combine
 
 class HomeViewController: UIViewController, UIViewControllerConfigurable {
     
+    
     var tableview: UITableView! = {
         let tableview = UITableView(frame: .zero, style: .grouped)
         tableview.translatesAutoresizingMaskIntoConstraints = false
@@ -22,10 +23,10 @@ class HomeViewController: UIViewController, UIViewControllerConfigurable {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = CGFloat.defaultRadius
-        button.setTitleColor(UIColor.white, for: .normal)
+        button.setTitleColor(UIColor.buttonTitle, for: .normal)
         button.titleLabel?.font = UIFont.boldBody
         button.setTitle("Schedule", for: .normal)
-        //button.backgroundColor = UIColor.assetColor(.navigationTitle)
+        button.backgroundColor = UIColor.buttonBackground
         button.addTarget(self, action: #selector(scheduleButtonClicked), for: .touchUpInside)
         return button
     }()
@@ -40,7 +41,7 @@ class HomeViewController: UIViewController, UIViewControllerConfigurable {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
     }
     
     override func viewDidLoad() {
@@ -52,6 +53,7 @@ class HomeViewController: UIViewController, UIViewControllerConfigurable {
     }
     
     func setupComponents() {
+        title = "Home"
         view.backgroundColor = UIColor.primaryBackground
         view.addSubview(tableview)
         view.addSubview(scheduleButton)
@@ -116,5 +118,6 @@ class HomeViewController: UIViewController, UIViewControllerConfigurable {
     }
     
     @objc func scheduleButtonClicked() {
+        viewModel.goToScheduleDetail()
     }
 }

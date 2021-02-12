@@ -38,6 +38,17 @@
 		A69B9C5E25D6369F00303AE0 /* TeamViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C5D25D6369F00303AE0 /* TeamViewPresenter.swift */; };
 		A69B9C6325D6374D00303AE0 /* TeamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C6225D6374D00303AE0 /* TeamViewCell.swift */; };
 		A69B9C6D25D63E3500303AE0 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C6C25D63E3500303AE0 /* HomeViewModelTest.swift */; };
+		A69B9C7525D6439B00303AE0 /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C7425D6439B00303AE0 /* ScheduleDetailViewController.swift */; };
+		A69B9C7A25D6474A00303AE0 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C7925D6474A00303AE0 /* ScheduleViewModel.swift */; };
+		A69B9C7F25D6477300303AE0 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C7E25D6477300303AE0 /* Match.swift */; };
+		A69B9C8425D6579800303AE0 /* ListMatchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C8325D6579800303AE0 /* ListMatchProtocol.swift */; };
+		A69B9C8925D657D500303AE0 /* MatchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C8825D657D500303AE0 /* MatchPresenter.swift */; };
+		A69B9C9025D658DB00303AE0 /* ScheduleViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C8F25D658DB00303AE0 /* ScheduleViewModelTest.swift */; };
+		A69B9C9825D65C4100303AE0 /* MatchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C9725D65C4100303AE0 /* MatchDataSource.swift */; };
+		A69B9C9E25D65CC800303AE0 /* MatchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9C9D25D65CC800303AE0 /* MatchViewCell.swift */; };
+		A69B9CA625D65CE600303AE0 /* MatchViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9CA525D65CE600303AE0 /* MatchViewPresenter.swift */; };
+		A69B9CAB25D65D9500303AE0 /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9CAA25D65D9500303AE0 /* ScheduleCoordinator.swift */; };
+		A69B9CB025D6686700303AE0 /* MatchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9CAF25D6686700303AE0 /* MatchCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +106,17 @@
 		A69B9C5D25D6369F00303AE0 /* TeamViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewPresenter.swift; sourceTree = "<group>"; };
 		A69B9C6225D6374D00303AE0 /* TeamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewCell.swift; sourceTree = "<group>"; };
 		A69B9C6C25D63E3500303AE0 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		A69B9C7425D6439B00303AE0 /* ScheduleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDetailViewController.swift; sourceTree = "<group>"; };
+		A69B9C7925D6474A00303AE0 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		A69B9C7E25D6477300303AE0 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		A69B9C8325D6579800303AE0 /* ListMatchProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMatchProtocol.swift; sourceTree = "<group>"; };
+		A69B9C8825D657D500303AE0 /* MatchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPresenter.swift; sourceTree = "<group>"; };
+		A69B9C8F25D658DB00303AE0 /* ScheduleViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModelTest.swift; sourceTree = "<group>"; };
+		A69B9C9725D65C4100303AE0 /* MatchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataSource.swift; sourceTree = "<group>"; };
+		A69B9C9D25D65CC800303AE0 /* MatchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewCell.swift; sourceTree = "<group>"; };
+		A69B9CA525D65CE600303AE0 /* MatchViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewPresenter.swift; sourceTree = "<group>"; };
+		A69B9CAA25D65D9500303AE0 /* ScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoordinator.swift; sourceTree = "<group>"; };
+		A69B9CAF25D6686700303AE0 /* MatchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +189,7 @@
 		A69B9BB225D5F51800303AE0 /* Scheduling-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9C8D25D658A100303AE0 /* Schedule */,
 				A69B9C6A25D63E1400303AE0 /* Home */,
 				A69B9BB325D5F51800303AE0 /* Scheduling_iOSTests.swift */,
 				A69B9BB525D5F51800303AE0 /* Info.plist */,
@@ -213,6 +236,7 @@
 				A69B9BDC25D5F61500303AE0 /* Pool.swift */,
 				A69B9BE425D5F61E00303AE0 /* Team.swift */,
 				A69B9BF825D5FA1F00303AE0 /* PoolSection.swift */,
+				A69B9C7E25D6477300303AE0 /* Match.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +327,7 @@
 				A69B9C0A25D5FC3C00303AE0 /* Configurable.swift */,
 				A69B9C2825D6038800303AE0 /* Coordinator.swift */,
 				A69B9C3625D6199C00303AE0 /* NameDescribable.swift */,
+				A69B9C8325D6579800303AE0 /* ListMatchProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -331,6 +356,8 @@
 		A69B9C4D25D6348500303AE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9C9C25D65CBC00303AE0 /* Cell */,
+				A69B9C7425D6439B00303AE0 /* ScheduleDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,6 +365,8 @@
 		A69B9C4E25D6348C00303AE0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9C7925D6474A00303AE0 /* ScheduleViewModel.swift */,
+				A69B9CAF25D6686700303AE0 /* MatchCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,6 +374,7 @@
 		A69B9C4F25D634DB00303AE0 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9C9725D65C4100303AE0 /* MatchDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -352,6 +382,7 @@
 		A69B9C5025D634F600303AE0 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9CAA25D65D9500303AE0 /* ScheduleCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -361,6 +392,8 @@
 			children = (
 				A69B9C5525D6364D00303AE0 /* TeamPresenter.swift */,
 				A69B9C5D25D6369F00303AE0 /* TeamViewPresenter.swift */,
+				A69B9C8825D657D500303AE0 /* MatchPresenter.swift */,
+				A69B9CA525D65CE600303AE0 /* MatchViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -379,6 +412,30 @@
 				A69B9C6C25D63E3500303AE0 /* HomeViewModelTest.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A69B9C8D25D658A100303AE0 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				A69B9C8E25D658AB00303AE0 /* ViewModel */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		A69B9C8E25D658AB00303AE0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A69B9C8F25D658DB00303AE0 /* ScheduleViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A69B9C9C25D65CBC00303AE0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A69B9C9D25D65CC800303AE0 /* MatchViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,12 +572,15 @@
 				A69B9BF125D5F97600303AE0 /* ListPoolProtocol.swift in Sources */,
 				A69B9C2F25D6164800303AE0 /* PoolSectionView.swift in Sources */,
 				A69B9C2425D6036E00303AE0 /* AppCoordinator.swift in Sources */,
+				A69B9C7A25D6474A00303AE0 /* ScheduleViewModel.swift in Sources */,
 				A69B9B9E25D5F51500303AE0 /* ViewController.swift in Sources */,
 				A69B9C1A25D5FDC900303AE0 /* CGFloat+Layout.swift in Sources */,
 				A69B9C4125D628BD00303AE0 /* UIViewController+Utils.swift in Sources */,
 				A69B9C1525D5FDBB00303AE0 /* Colors+Utils.swift in Sources */,
 				A69B9BEA25D5F91C00303AE0 /* HomeDataSource.swift in Sources */,
+				A69B9CB025D6686700303AE0 /* MatchCellViewModel.swift in Sources */,
 				A69B9B9A25D5F51500303AE0 /* AppDelegate.swift in Sources */,
+				A69B9C7525D6439B00303AE0 /* ScheduleDetailViewController.swift in Sources */,
 				A69B9C2925D6038800303AE0 /* Coordinator.swift in Sources */,
 				A69B9C5625D6364D00303AE0 /* TeamPresenter.swift in Sources */,
 				A69B9BF925D5FA1F00303AE0 /* PoolSection.swift in Sources */,
@@ -528,14 +588,21 @@
 				A69B9B9C25D5F51500303AE0 /* SceneDelegate.swift in Sources */,
 				A69B9C3C25D6288900303AE0 /* UIAlertController+Utils.swift in Sources */,
 				A69B9C1025D5FC7600303AE0 /* HomeViewModel.swift in Sources */,
+				A69B9C8425D6579800303AE0 /* ListMatchProtocol.swift in Sources */,
 				A69B9C0625D5FBE000303AE0 /* HomeViewController.swift in Sources */,
+				A69B9CAB25D65D9500303AE0 /* ScheduleCoordinator.swift in Sources */,
 				A69B9BA425D5F51500303AE0 /* Scheduling_iOS.xcdatamodeld in Sources */,
+				A69B9C9E25D65CC800303AE0 /* MatchViewCell.swift in Sources */,
 				A69B9BDD25D5F61500303AE0 /* Pool.swift in Sources */,
 				A69B9C5E25D6369F00303AE0 /* TeamViewPresenter.swift in Sources */,
+				A69B9C8925D657D500303AE0 /* MatchPresenter.swift in Sources */,
+				A69B9C9825D65C4100303AE0 /* MatchDataSource.swift in Sources */,
 				A69B9C3725D6199C00303AE0 /* NameDescribable.swift in Sources */,
 				A69B9C6325D6374D00303AE0 /* TeamViewCell.swift in Sources */,
+				A69B9CA625D65CE600303AE0 /* MatchViewPresenter.swift in Sources */,
 				A69B9C1F25D5FDDD00303AE0 /* UIFont+Utils.swift in Sources */,
 				A69B9BFE25D5FA4800303AE0 /* SectionModelType.swift in Sources */,
+				A69B9C7F25D6477300303AE0 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +612,7 @@
 			files = (
 				A69B9BB425D5F51800303AE0 /* Scheduling_iOSTests.swift in Sources */,
 				A69B9C6D25D63E3500303AE0 /* HomeViewModelTest.swift in Sources */,
+				A69B9C9025D658DB00303AE0 /* ScheduleViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

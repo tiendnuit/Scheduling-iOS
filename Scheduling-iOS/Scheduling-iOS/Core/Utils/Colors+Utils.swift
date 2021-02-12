@@ -32,6 +32,11 @@ extension UIColor {
     public static var secondaryBackground: UIColor = .dynamicColor(
         light: .gray(level: 1),
         dark: .gray(level: 6))
+    
+    /// Disabled button color (excluded acessories)
+    public static var disabledButton: UIColor = .dynamicColor(
+        light: .gray(level: 2),
+        dark: .gray(level: 5))
 
     /// FightCamp gray color according to the level
     /// - Parameter level: 1 to 6, light to dark scale
