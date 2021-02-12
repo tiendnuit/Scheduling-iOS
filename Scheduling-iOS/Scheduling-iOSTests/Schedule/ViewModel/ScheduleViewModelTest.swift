@@ -14,7 +14,7 @@ class ScheduleViewModelTest: XCTestCase {
     
     override func setUp() {
         let homeVM = HomeViewModel()
-        homeVM.updatePools(size: 4, teamSize: 4)
+        homeVM.updatePools(size: 4, teamSize:8)
         viewModel = ScheduleViewModel(pools: homeVM.pools)
     }
     
@@ -26,20 +26,49 @@ class ScheduleViewModelTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_update_poolSize_4_teamSize_8() {
+    func test_calculate_schedule_poolSize_4_teamSize_8() {
 
-//        //Given
-//        let poolSize = 4
-//        let teamSize = 8
-//
-//        //When
-//        viewModel.updatePools(size: poolSize, teamSize: teamSize)
-//
-//
-//        //Then
-//        XCTAssert(viewModel.pools.count != 0)
-//        XCTAssert(viewModel.pools.count == poolSize)
-//        XCTAssert(viewModel.pools.first!.teams.count == teamSize)
+        //Given
+        let poolSize = 4
+        let teamSize = 8
+        let minMatch = 8
+        let minTotalMatch = teamSize/2 * minMatch
+        let homeVM = HomeViewModel()
+        homeVM.updatePools(size: poolSize, teamSize:teamSize)
+        
+        //When
+        viewModel = ScheduleViewModel(pools: homeVM.pools)
+
+        //Then
+        XCTAssert(homeVM.pools.first!.teams.filter{$0.numOfMatches < minMatch}.count == 0)
+        XCTAssert(viewModel.matches.count >= minTotalMatch)
+    }
+    
+    func test_goNext() {
+
+        //Given
+        let currentWeek = viewModel.currentWeek
+
+        //When
+        viewModel.goNext()
+
+        //Then
+        XCTAssert(viewModel.currentWeek == currentWeek + 1)
+        XCTAssert(viewModel.items.count > 0 && viewModel.items.count <= 5)
+    }
+    
+    func test_goPre() {
+
+        //Given
+        viewModel.goNext()
+        let currentWeek = viewModel.currentWeek
+        
+        //When
+        viewModel.goBack()
+
+        //Then
+        XCTAssert(viewModel.currentWeek == currentWeek - 1)
+        XCTAssert(viewModel.items.count > 0 && viewModel.items.count <= 5)
     }
     
     func testPerformanceExample() throws {

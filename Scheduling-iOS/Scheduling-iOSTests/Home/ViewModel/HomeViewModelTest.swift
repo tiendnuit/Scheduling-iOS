@@ -39,15 +39,31 @@ class HomeViewModelTest: XCTestCase {
         XCTAssert(viewModel.pools.first!.teams.count == teamSize)
     }
     
+    func test_update_poolSize_3_teamSize_8_fail() {
+        //Given
+        let poolSize = 3
+        let teamSize = 8
+        
+        //When
+        viewModel.updatePools(size: poolSize, teamSize: teamSize)
+        
+        
+        //Then
+        XCTAssert(viewModel.pools.count != 0)
+        XCTAssert(viewModel.pools.count != poolSize)
+        XCTAssert(viewModel.pools.first!.teams.count != teamSize)
+    }
+    
     func test_update_poolName_success() {
         //Given
         let name = "Pool A"
         
         //When
-        viewModel.editPoolName(name, at: 1)
+        viewModel.editSectionName(name, at: 1)
         
         //Then
         XCTAssert(viewModel.pools[1].name == name)
+        XCTAssert(viewModel.sections[1].header == name)
     }
     
     func test_update_existedPoolName() {
@@ -55,8 +71,8 @@ class HomeViewModelTest: XCTestCase {
         let name = "Pool A"
         
         //When
-        viewModel.editPoolName(name, at: 1)
-        viewModel.editPoolName(name, at: 2)
+        viewModel.editSectionName(name, at: 1)
+        viewModel.editSectionName(name, at: 2)
         
         //Then
         XCTAssert(viewModel.pools[1].name == name)
@@ -70,7 +86,7 @@ class HomeViewModelTest: XCTestCase {
         let teamIndex = 1
         
         //When
-        viewModel.editTeamName(name, at: IndexPath(row: teamIndex, section: poolIndex))
+        viewModel.editRowName(name, at: IndexPath(row: teamIndex, section: poolIndex))
         
         //Then
         XCTAssert(viewModel.pools[poolIndex].teams[teamIndex].name == name)
@@ -84,12 +100,41 @@ class HomeViewModelTest: XCTestCase {
         let team2Index = 2
         
         //When
-        viewModel.editTeamName(name, at: IndexPath(row: team1Index, section: poolIndex))
-        viewModel.editTeamName(name, at: IndexPath(row: team2Index, section: poolIndex))
+        viewModel.editRowName(name, at: IndexPath(row: team1Index, section: poolIndex))
+        viewModel.editRowName(name, at: IndexPath(row: team2Index, section: poolIndex))
         
         //Then
         XCTAssert(viewModel.pools[poolIndex].teams[team1Index].name == name)
         XCTAssert(viewModel.pools[poolIndex].teams[team2Index].name != name)
+    }
+    
+    func test_expande_pool_1() {
+        //Given
+        let poolSize = 4
+        let teamSize = 8
+        let poolIndex = 0
+        viewModel.updatePools(size: poolSize, teamSize: teamSize)
+        
+        //When
+        viewModel.expandeSection(at: poolIndex)
+        
+        //Then
+        XCTAssert(viewModel.sections[poolIndex].items.count == teamSize)
+    }
+    
+    func test_collapse_pool_1() {
+        //Given
+        let poolSize = 4
+        let teamSize = 8
+        let poolIndex = 0
+        viewModel.updatePools(size: poolSize, teamSize: teamSize)
+        viewModel.expandeSection(at: poolIndex)
+        
+        //When
+        viewModel.expandeSection(at: poolIndex)
+        
+        //Then
+        XCTAssert(viewModel.sections[poolIndex].items.isEmpty)
     }
     
 

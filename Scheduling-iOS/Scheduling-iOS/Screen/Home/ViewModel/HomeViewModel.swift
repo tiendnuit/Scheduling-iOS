@@ -11,7 +11,7 @@ import Combine
 class HomeViewModel {
     @Published private(set) var pools: [Pool] = []
     @Published private(set) var reload = false
-    @Published private(set) var alertMessage = ""
+    @Published private(set) var alertMessage: SchedulingError?
     @Published private(set) var showScheduleDetail = false
     
     internal var bindings = Set<AnyCancellable>()
@@ -20,7 +20,23 @@ class HomeViewModel {
         
     }
     
+    private func validateSize(poolSize: Int, teamSize: Int) -> Bool {
+        guard poolSize%2 == 0, poolSize >= 2 else {
+            alertMessage = .InvalidPoolSize
+            return false
+        }
+        guard teamSize >= 2 else {
+            alertMessage = .InvalidTeamSize
+            return false
+        }
+        return true
+    }
+    
     func updatePools(size: Int, teamSize: Int) {
+        guard validateSize(poolSize: size, teamSize: teamSize) else {
+            return 
+        }
+        
         pools = (1...size).map{Pool(name: "Pool \($0)", teamSize: teamSize)}
         expanded = Array(repeating: false, count: size)
         reload = true
@@ -29,7 +45,7 @@ class HomeViewModel {
     func editPoolName(_ name: String, at section: Int) {
         let notExisted = pools.filter{$0.name == name}.isEmpty
         guard notExisted else {
-            alertMessage = "This name already exists!"
+            alertMessage = .NameExists
             return
         }
         pools[section].name = name
@@ -41,7 +57,7 @@ class HomeViewModel {
         let notExisted = pool.teams.filter{$0.name == name}.isEmpty
         //Make sure this name not exists in the pool
         guard notExisted else {
-            alertMessage = "This name already exists!"
+            alertMessage = .NameExists
             return
         }
         pool.updateTeamName(name, at: indexPath.row)

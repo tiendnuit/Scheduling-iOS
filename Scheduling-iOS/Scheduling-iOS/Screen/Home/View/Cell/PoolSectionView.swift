@@ -36,7 +36,7 @@ final class PoolSectionView: UITableViewHeaderFooterView {
         button.layer.cornerRadius = CGFloat.defaultRadius
         button.setTitleColor(UIColor.buttonTitle, for: .normal)
         button.titleLabel?.font = UIFont.boldBody
-        button.setTitle("Ex", for: .normal)
+        button.setImage(#imageLiteral(resourceName: "icon-expande"), for: .normal)
         button.backgroundColor = UIColor.buttonBackground
         button.addTarget(self, action: #selector(expandeButtonClicked), for: .touchUpInside)
         return button
@@ -70,10 +70,12 @@ final class PoolSectionView: UITableViewHeaderFooterView {
             titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: CGFloat.defaultSpacing),
             titleLabel.rightAnchor.constraint(equalTo: editButton.leftAnchor, constant: CGFloat.defaultComponentsSpacing),
+            
             editButton.heightAnchor.constraint(equalToConstant: CGFloat.smallButtonHeight),
             editButton.widthAnchor.constraint(equalToConstant: CGFloat.smallButtonHeight),
             editButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             editButton.rightAnchor.constraint(equalTo: expandedButton.leftAnchor, constant: -CGFloat.defaultComponentsSpacing),
+            
             expandedButton.heightAnchor.constraint(equalToConstant: CGFloat.smallButtonHeight),
             expandedButton.widthAnchor.constraint(equalToConstant: CGFloat.smallButtonHeight),
             expandedButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),

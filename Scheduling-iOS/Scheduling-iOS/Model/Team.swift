@@ -18,6 +18,10 @@ struct Team {
     func updateMatchCount(_ count: Int) -> Team {
         return Team(name: name, numOfMatches: numOfMatches + count)
     }
+    
+    func reset() -> Team {
+        return Team(name: name)
+    }
 }
 
 extension Team: TeamPresenter {

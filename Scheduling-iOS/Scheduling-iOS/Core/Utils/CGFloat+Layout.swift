@@ -40,5 +40,7 @@ extension CGFloat {
     public static var topScheduleBarHeight: CGFloat { 40 }
     /// Default width of the button
     public static var defaultButtonWidth: CGFloat { 40 }
+    /// Default width of the textfield
+    public static var defaultTextfieldWidth: CGFloat { 200 }
 }
 

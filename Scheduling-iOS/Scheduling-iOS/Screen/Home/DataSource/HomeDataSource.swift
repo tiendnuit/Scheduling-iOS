@@ -76,8 +76,8 @@ extension HomeDataSource: UITableViewDataSource, UITableViewDelegate {
         }
         
         view.titleLabel.text = delegate?.titleForHeader(section)
-        let test = (delegate?.isExpandedSection(at: section) == true) ? "ex" : "co"
-        view.expandedButton.setTitle(test, for: .normal)
+        let icon = (delegate?.isExpandedSection(at: section) == true) ? #imageLiteral(resourceName: "icon-collapse")  : #imageLiteral(resourceName: "icon-expande")
+        view.expandedButton.setImage(icon, for: .normal)
         view.editPoolNameClosure = { [weak self] name in
             self?.delegate?.editSectionName(name, at: section)
         }

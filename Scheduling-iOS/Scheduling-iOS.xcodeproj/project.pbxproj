@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		A69B9B9A25D5F51500303AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9B9925D5F51500303AE0 /* AppDelegate.swift */; };
 		A69B9B9C25D5F51500303AE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9B9B25D5F51500303AE0 /* SceneDelegate.swift */; };
-		A69B9B9E25D5F51500303AE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9B9D25D5F51500303AE0 /* ViewController.swift */; };
 		A69B9BA125D5F51500303AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69B9B9F25D5F51500303AE0 /* Main.storyboard */; };
-		A69B9BA425D5F51500303AE0 /* Scheduling_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A69B9BA225D5F51500303AE0 /* Scheduling_iOS.xcdatamodeld */; };
 		A69B9BA625D5F51800303AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A69B9BA525D5F51800303AE0 /* Assets.xcassets */; };
 		A69B9BA925D5F51800303AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69B9BA725D5F51800303AE0 /* LaunchScreen.storyboard */; };
 		A69B9BB425D5F51800303AE0 /* Scheduling_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9BB325D5F51800303AE0 /* Scheduling_iOSTests.swift */; };
@@ -49,6 +47,8 @@
 		A69B9CA625D65CE600303AE0 /* MatchViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9CA525D65CE600303AE0 /* MatchViewPresenter.swift */; };
 		A69B9CAB25D65D9500303AE0 /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9CAA25D65D9500303AE0 /* ScheduleCoordinator.swift */; };
 		A69B9CB025D6686700303AE0 /* MatchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9CAF25D6686700303AE0 /* MatchCellViewModel.swift */; };
+		A69B9CB525D6DE3600303AE0 /* MatchCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9CB425D6DE3600303AE0 /* MatchCellViewModelTest.swift */; };
+		A69B9CBA25D6E65300303AE0 /* SchedulingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9CB925D6E65300303AE0 /* SchedulingError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +72,7 @@
 		A69B9B9625D5F51500303AE0 /* Scheduling-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduling-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69B9B9925D5F51500303AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A69B9B9B25D5F51500303AE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A69B9B9D25D5F51500303AE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A69B9BA025D5F51500303AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A69B9BA325D5F51500303AE0 /* Scheduling_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scheduling_iOS.xcdatamodel; sourceTree = "<group>"; };
 		A69B9BA525D5F51800303AE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A69B9BA825D5F51800303AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A69B9BAA25D5F51800303AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +115,8 @@
 		A69B9CA525D65CE600303AE0 /* MatchViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewPresenter.swift; sourceTree = "<group>"; };
 		A69B9CAA25D65D9500303AE0 /* ScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoordinator.swift; sourceTree = "<group>"; };
 		A69B9CAF25D6686700303AE0 /* MatchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellViewModel.swift; sourceTree = "<group>"; };
+		A69B9CB425D6DE3600303AE0 /* MatchCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCellViewModelTest.swift; sourceTree = "<group>"; };
+		A69B9CB925D6E65300303AE0 /* SchedulingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,13 +175,6 @@
 				A69B9BD125D5F55800303AE0 /* Screen */,
 				A69B9BD025D5F55100303AE0 /* Storyboard */,
 				A69B9BCF25D5F54A00303AE0 /* Resources */,
-				A69B9B9925D5F51500303AE0 /* AppDelegate.swift */,
-				A69B9B9B25D5F51500303AE0 /* SceneDelegate.swift */,
-				A69B9B9D25D5F51500303AE0 /* ViewController.swift */,
-				A69B9B9F25D5F51500303AE0 /* Main.storyboard */,
-				A69B9BA725D5F51800303AE0 /* LaunchScreen.storyboard */,
-				A69B9BAA25D5F51800303AE0 /* Info.plist */,
-				A69B9BA225D5F51500303AE0 /* Scheduling_iOS.xcdatamodeld */,
 			);
 			path = "Scheduling-iOS";
 			sourceTree = "<group>";
@@ -209,6 +202,7 @@
 		A69B9BCF25D5F54A00303AE0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9BAA25D5F51800303AE0 /* Info.plist */,
 				A69B9BA525D5F51800303AE0 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -217,6 +211,8 @@
 		A69B9BD025D5F55100303AE0 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9B9F25D5F51500303AE0 /* Main.storyboard */,
+				A69B9BA725D5F51800303AE0 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -253,6 +249,9 @@
 		A69B9BD425D5F57000303AE0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				A69B9B9925D5F51500303AE0 /* AppDelegate.swift */,
+				A69B9B9B25D5F51500303AE0 /* SceneDelegate.swift */,
+				A69B9CB925D6E65300303AE0 /* SchedulingError.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -426,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				A69B9C8F25D658DB00303AE0 /* ScheduleViewModelTest.swift */,
+				A69B9CB425D6DE3600303AE0 /* MatchCellViewModelTest.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -573,13 +573,13 @@
 				A69B9C2F25D6164800303AE0 /* PoolSectionView.swift in Sources */,
 				A69B9C2425D6036E00303AE0 /* AppCoordinator.swift in Sources */,
 				A69B9C7A25D6474A00303AE0 /* ScheduleViewModel.swift in Sources */,
-				A69B9B9E25D5F51500303AE0 /* ViewController.swift in Sources */,
 				A69B9C1A25D5FDC900303AE0 /* CGFloat+Layout.swift in Sources */,
 				A69B9C4125D628BD00303AE0 /* UIViewController+Utils.swift in Sources */,
 				A69B9C1525D5FDBB00303AE0 /* Colors+Utils.swift in Sources */,
 				A69B9BEA25D5F91C00303AE0 /* HomeDataSource.swift in Sources */,
 				A69B9CB025D6686700303AE0 /* MatchCellViewModel.swift in Sources */,
 				A69B9B9A25D5F51500303AE0 /* AppDelegate.swift in Sources */,
+				A69B9CBA25D6E65300303AE0 /* SchedulingError.swift in Sources */,
 				A69B9C7525D6439B00303AE0 /* ScheduleDetailViewController.swift in Sources */,
 				A69B9C2925D6038800303AE0 /* Coordinator.swift in Sources */,
 				A69B9C5625D6364D00303AE0 /* TeamPresenter.swift in Sources */,
@@ -591,7 +591,6 @@
 				A69B9C8425D6579800303AE0 /* ListMatchProtocol.swift in Sources */,
 				A69B9C0625D5FBE000303AE0 /* HomeViewController.swift in Sources */,
 				A69B9CAB25D65D9500303AE0 /* ScheduleCoordinator.swift in Sources */,
-				A69B9BA425D5F51500303AE0 /* Scheduling_iOS.xcdatamodeld in Sources */,
 				A69B9C9E25D65CC800303AE0 /* MatchViewCell.swift in Sources */,
 				A69B9BDD25D5F61500303AE0 /* Pool.swift in Sources */,
 				A69B9C5E25D6369F00303AE0 /* TeamViewPresenter.swift in Sources */,
@@ -610,6 +609,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69B9CB525D6DE3600303AE0 /* MatchCellViewModelTest.swift in Sources */,
 				A69B9BB425D5F51800303AE0 /* Scheduling_iOSTests.swift in Sources */,
 				A69B9C6D25D63E3500303AE0 /* HomeViewModelTest.swift in Sources */,
 				A69B9C9025D658DB00303AE0 /* ScheduleViewModelTest.swift in Sources */,
@@ -781,7 +781,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Scheduling-iOS/Info.plist";
+				INFOPLIST_FILE = "Scheduling-iOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -799,7 +799,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Scheduling-iOS/Info.plist";
+				INFOPLIST_FILE = "Scheduling-iOS/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -931,19 +931,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A69B9BA225D5F51500303AE0 /* Scheduling_iOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A69B9BA325D5F51500303AE0 /* Scheduling_iOS.xcdatamodel */,
-			);
-			currentVersion = A69B9BA325D5F51500303AE0 /* Scheduling_iOS.xcdatamodel */;
-			path = Scheduling_iOS.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A69B9B8E25D5F51500303AE0 /* Project object */;
 }

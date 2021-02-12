@@ -57,6 +57,10 @@ class Pool {
         return results
     }
     
+    func reset() {
+        teams = teams.map { $0.reset()}
+    }
+    
 }
 
 extension Pool: Equatable {

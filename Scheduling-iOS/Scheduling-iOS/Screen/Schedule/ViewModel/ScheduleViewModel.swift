@@ -17,7 +17,7 @@ class ScheduleViewModel {
     @Published private(set) var preable: Bool = false   // Can go back
     @Published private(set) var currentWeek = 1
     
-    internal var bindings = Set<AnyCancellable>()
+    fileprivate var bindings = Set<AnyCancellable>()
     fileprivate var expanded: [Bool] = []
     fileprivate var pools: [Pool] = []
     fileprivate var opponentsDict: [String: Pool] = [:]
@@ -30,6 +30,8 @@ class ScheduleViewModel {
     
     /// calculate to get schedule detail
     private func calculate() {
+        //reset teams in each of pool
+        pools.forEach {$0.reset()}
         //Random pick opponent for each pool
         pools = pools.shuffled()
         stride(from: 0, to: pools.count - 1, by: 2).forEach {
@@ -76,7 +78,6 @@ extension ScheduleViewModel: ListMatchProtocol {
     var items: [MatchCellViewModel] {
         let fromIdx = (currentWeek-1)*MATCH_PER_WEEK
         let toIdx = min(fromIdx + MATCH_PER_WEEK, matches.count)
-        //return Array(matches[fromIdx..<toIdx])
         return Array(matches[fromIdx..<toIdx]).enumerated().map{MatchCellViewModel(match: $1, day: $0/3+1, game: fromIdx+$0+1)}
     }
 }
