@@ -32,6 +32,7 @@ class ScheduleViewModel {
     private func calculate() {
         //reset teams in each of pool
         pools.forEach {$0.reset()}
+        opponentsDict = [:]
         //Random pick opponent for each pool
         pools = pools.shuffled()
         stride(from: 0, to: pools.count - 1, by: 2).forEach {
@@ -43,6 +44,7 @@ class ScheduleViewModel {
         for pool in pools {
             //Add matches from same pool
             numOfMatches.append(contentsOf: pool.matchesFromSamePool())
+            //Add matches from opponent pool
             if let opponentPool = opponentsDict[pool.name] {
                 numOfMatches.append(contentsOf: pool.matchesFromOpponentPool(opponentPool))
             }
@@ -78,6 +80,8 @@ extension ScheduleViewModel: ListMatchProtocol {
     var items: [MatchCellViewModel] {
         let fromIdx = (currentWeek-1)*MATCH_PER_WEEK
         let toIdx = min(fromIdx + MATCH_PER_WEEK, matches.count)
-        return Array(matches[fromIdx..<toIdx]).enumerated().map{MatchCellViewModel(match: $1, day: $0/3+1, game: fromIdx+$0+1)}
+        return Array(matches[fromIdx..<toIdx])
+            .enumerated()
+            .map{MatchCellViewModel(match: $1, day: $0/3+1, game: fromIdx+$0+1)}
     }
 }

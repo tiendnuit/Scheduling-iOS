@@ -15,7 +15,9 @@ class Pool {
     }
     
     var randomTeamIndex: Int? {
-        return (0..<teams.count).randomElement()
+        return (0..<teams.count)
+            //.filter{teams[$0].numOfMatches == 0}      //Using if each team should has num of match == num of team
+            .randomElement()
     }
     
     init(name: String, teamSize: Int) {
@@ -30,8 +32,9 @@ class Pool {
     func matchesFromSamePool() -> [Match] {
         var results = [Match]()
         //Get Match from each of Team
-        for team in teams {
-            let matches = teams.compactMap {
+        for i in 0..<teams.count {
+            let team = teams[i]
+            let matches = teams[i..<teams.count].compactMap {
                 return $0 == team ? nil : Match(leftPool: self, leftTeam: team, rightTeam: $0, rightPool: self)
             }
             results.append(contentsOf: matches)

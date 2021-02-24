@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A620885B25E615E5004628CC /* PoolTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A620885A25E615E5004628CC /* PoolTest.swift */; };
 		A69B9B9A25D5F51500303AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9B9925D5F51500303AE0 /* AppDelegate.swift */; };
 		A69B9B9C25D5F51500303AE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69B9B9B25D5F51500303AE0 /* SceneDelegate.swift */; };
 		A69B9BA125D5F51500303AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69B9B9F25D5F51500303AE0 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A620885A25E615E5004628CC /* PoolTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolTest.swift; sourceTree = "<group>"; };
 		A69B9B9625D5F51500303AE0 /* Scheduling-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scheduling-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69B9B9925D5F51500303AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A69B9B9B25D5F51500303AE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A620884E25E615C8004628CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A620885A25E615E5004628CC /* PoolTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A69B9B8D25D5F51500303AE0 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 		A69B9BB225D5F51800303AE0 /* Scheduling-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				A620884E25E615C8004628CC /* Model */,
 				A69B9C8D25D658A100303AE0 /* Schedule */,
 				A69B9C6A25D63E1400303AE0 /* Home */,
 				A69B9BB325D5F51800303AE0 /* Scheduling_iOSTests.swift */,
@@ -610,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69B9CB525D6DE3600303AE0 /* MatchCellViewModelTest.swift in Sources */,
+				A620885B25E615E5004628CC /* PoolTest.swift in Sources */,
 				A69B9BB425D5F51800303AE0 /* Scheduling_iOSTests.swift in Sources */,
 				A69B9C6D25D63E3500303AE0 /* HomeViewModelTest.swift in Sources */,
 				A69B9C9025D658DB00303AE0 /* ScheduleViewModelTest.swift in Sources */,
